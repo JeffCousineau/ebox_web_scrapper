@@ -11,16 +11,17 @@ try:
         
     driver = webdriver.Firefox(options=options)
     driver.get("https://www.hydroquebec.com/portail/fr/group/clientele/gerer-mon-compte")
-    sleep(5)
-    driver.find_element_by_id("idToken1").send_keys("jeffrey.cousineau@gmail.com")
-    driver.find_element_by_id("idToken2").send_keys("78523000Jc")
+    sleep(15)
+    driver.find_element_by_id("idToken1").send_keys("****")
+    driver.find_element_by_id("idToken2").send_keys("****")
     driver.find_element_by_id("loginButton_0").click()
-    driver.get("https://session.hydroquebec.com/portail/fr/group/clientele/gerer-mon-compte")
-
+    sleep(5)
+    #driver.get("https://session.hydroquebec.com/portail/fr/group/clientele/gerer-mon-compte")
+    driver.get("https://session.hydroquebec.com/portail/fr/group/clientele/portrait-de-consommation")
     sleep(15)
     
     #driver.get("https://client.ebox.ca/myusage")
-    elem = driver.find_element_by_class_name("solde")
+    elem = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/section/div[1]/div/form/article/div[1]/div/div[1]/p")
     #consommation_text = elem.text.replace('G','').replace('o','')
     #used = consommation_text.split()[0]
     #maximum = consommation_text.split()[2]
